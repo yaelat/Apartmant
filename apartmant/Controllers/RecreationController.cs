@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.ObjectPool;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -8,36 +9,49 @@ namespace apartmant.Controllers
     [ApiController]
     public class RecreationController : ControllerBase
     {
+        static List<Recreation> recreation=new List<Recreation>;
+        static int id=0;
         // GET: api/<RecreationController>
         [HttpGet]
-        public IEnumerable<string> Get()
+        public IEnumerable<Recreation> Get()
         {
-            return new string[] { "value1", "value2" };
+            return recreation;
         }
 
         // GET api/<RecreationController>/5
         [HttpGet("{id}")]
-        public string Get(int id)
+        public Recreation Get(int id)
         {
-            return "value";
+            return recreation.Find(e=>e.Id==id);
         }
 
         // POST api/<RecreationController>
         [HttpPost]
-        public void Post([FromBody] string value)
+        public void Post([FromBody] Recreation value)
         {
+            value.Id=id++;
+            recreation.Add(value);
         }
 
         // PUT api/<RecreationController>/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        public void Put(int id, [FromBody] Renting value)
         {
+            let val=recreation.Find(e=>e.Id==id);
+            val.Id=value.Id;
+            val.Price=value.Price;
+            val.NameOner=value.NameOner;    
+            val.Number=value.Number;
+            val.Adress=value.Adress;
+
         }
 
         // DELETE api/<RecreationController>/5
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
+            let val=recreation.Find(e=>e.Id=id);
+            recreation.Remove(val);
         }
     }
 }

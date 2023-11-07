@@ -8,36 +8,45 @@ namespace apartmant.Controllers
     [ApiController]
     public class RentingController : ControllerBase
     {
+        static List<Renting> rentings=new List<Renting>
+        static int id=0;
         // GET: api/<RentingController>
         [HttpGet]
-        public IEnumerable<string> Get()
+        public IEnumerable<Renting> Get()
         {
-            return new string[] { "value1", "value2" };
+            return rentings;
         }
 
         // GET api/<RentingController>/5
         [HttpGet("{id}")]
-        public string Get(int id)
+        public Renting Get(int id)
         {
-            return "value";
+            return rentings.Find(e=>e.Id==id);
         }
 
         // POST api/<RentingController>
         [HttpPost]
-        public void Post([FromBody] string value)
+        public void Post([FromBody] Renting value)
         {
+            value.Id=id++;
+            rentings.Add(value);
         }
 
         // PUT api/<RentingController>/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        public void Put(int id, [FromBody] Renting value)
         {
+            let val=rentings.Find(e=>e.Id==id);
+            val.Id=value.Id;
+            val.Name=value.Name;    
         }
 
         // DELETE api/<RentingController>/5
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
+             let val=rentings.Find(e=>e.Id=id);
+            rentings.Remove(val);
         }
     }
 }

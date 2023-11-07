@@ -25,3 +25,13 @@ C:\Users\user1\Desktop\H.W\שנה ב\net core\דירות\apartmant\apartmant\obj
 C:\Users\user1\Desktop\H.W\שנה ב\net core\דירות\apartmant\apartmant\obj\Debug\net6.0\apartmant.pdb
 C:\Users\user1\Desktop\H.W\שנה ב\net core\דירות\apartmant\apartmant\obj\Debug\net6.0\apartmant.genruntimeconfig.cache
 C:\Users\user1\Desktop\H.W\שנה ב\net core\דירות\apartmant\apartmant\obj\Debug\net6.0\ref\apartmant.dll
+C:\Users\user1\Desktop\H.W\שנה ב\net core\apartmant\apartmant\obj\Debug\net6.0\apartmant.csproj.AssemblyReference.cache
+C:\Users\user1\Desktop\H.W\שנה ב\net core\apartmant\apartmant\obj\Debug\net6.0\apartmant.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user1\Desktop\H.W\שנה ב\net core\apartmant\apartmant\obj\Debug\net6.0\apartmant.AssemblyInfoInputs.cache
+C:\Users\user1\Desktop\H.W\שנה ב\net core\apartmant\apartmant\obj\Debug\net6.0\apartmant.AssemblyInfo.cs
+C:\Users\user1\Desktop\H.W\שנה ב\net core\apartmant\apartmant\obj\Debug\net6.0\apartmant.csproj.CoreCompileInputs.cache
+C:\Users\user1\Desktop\H.W\שנה ב\net core\apartmant\apartmant\obj\Debug\net6.0\apartmant.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\user1\Desktop\H.W\שנה ב\net core\apartmant\apartmant\obj\Debug\net6.0\apartmant.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\user1\Desktop\H.W\שנה ב\net core\apartmant\apartmant\obj\Debug\net6.0\apartmant.dll
+C:\Users\user1\Desktop\H.W\שנה ב\net core\apartmant\apartmant\obj\Debug\net6.0\refint\apartmant.dll
+C:\Users\user1\Desktop\H.W\שנה ב\net core\apartmant\apartmant\obj\Debug\net6.0\apartmant.pdb
