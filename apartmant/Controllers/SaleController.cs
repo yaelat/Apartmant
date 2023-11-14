@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using apartmant.Entities;
+using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -8,20 +9,25 @@ namespace apartmant.Controllers
     [ApiController]
     public class SaleController : ControllerBase
     {
-        static List<Sale> sales=new List<Sale>();
-        static int id=0;
+        private readonly DataContext _context;
+        static int id = 0;
+        // GET: api/<RecreationController>
+        public SaleController(DataContext DC)
+        {
+            _context = DC;
+        }
         // GET: api/<SaleController>
         [HttpGet]
         public IEnumerable<Sale> Get()
         {
-            return sales;
+            return _context.sales;
         }
 
         // GET api/<SaleController>/5
         [HttpGet("{id}")]
         public Sale Get(int id)
         {
-            return sales.Find(e=>e.Id==id);
+            return _context.sales.Find(e=>e.Id==id);
         }
 
         // POST api/<SaleController>
@@ -29,14 +35,14 @@ namespace apartmant.Controllers
         public void Post([FromBody] Sale value)
         {
             value.Id = id++;
-            sales.Add(value);
+            _context.sales.Add(value);
         }
 
         // PUT api/<SaleController>/5
         [HttpPut("{id}")]
         public void Put(int id, [FromBody] Sale value)
         {
-            var val=sales.Find(e=>e.Id==id);
+            var val= _context.sales.Find(e=>e.Id==id);
             val.Id=value.Id;
             val.Name=value.Name;    
         }
@@ -45,8 +51,8 @@ namespace apartmant.Controllers
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
-             var val=sales.Find(e=>e.Id==id);
-            sales.Remove(val);
+             var val= _context.sales.Find(e=>e.Id==id);
+            _context.sales.Remove(val);
         }
     }
 }
