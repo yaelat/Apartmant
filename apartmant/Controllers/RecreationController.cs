@@ -9,7 +9,7 @@ namespace apartmant.Controllers
     [ApiController]
     public class RecreationController : ControllerBase
     {
-        static List<Recreation> recreation=new List<Recreation>;
+        
         static int id=0;
         // GET: api/<RecreationController>
         [HttpGet]
@@ -35,9 +35,9 @@ namespace apartmant.Controllers
 
         // PUT api/<RecreationController>/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] Renting value)
+        public void Put(int id, [FromBody] Recreation value)
         {
-            let val=recreation.Find(e=>e.Id==id);
+            var val=recreation.Find(e=>e.Id==id);
             val.Id=value.Id;
             val.Price=value.Price;
             val.NameOner=value.NameOner;    
@@ -50,7 +50,7 @@ namespace apartmant.Controllers
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
-            let val=recreation.Find(e=>e.Id=id);
+            var val=recreation.Find(e=>e.Id==id);
             recreation.Remove(val);
         }
     }

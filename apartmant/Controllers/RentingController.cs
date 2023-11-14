@@ -8,7 +8,7 @@ namespace apartmant.Controllers
     [ApiController]
     public class RentingController : ControllerBase
     {
-        static List<Renting> rentings=new List<Renting>
+        static List<Renting> rentings = new List<Renting>();
         static int id=0;
         // GET: api/<RentingController>
         [HttpGet]
@@ -36,7 +36,7 @@ namespace apartmant.Controllers
         [HttpPut("{id}")]
         public void Put(int id, [FromBody] Renting value)
         {
-            let val=rentings.Find(e=>e.Id==id);
+            var val=rentings.Find(e=>e.Id==id);
             val.Id=value.Id;
             val.Name=value.Name;    
         }
@@ -45,7 +45,7 @@ namespace apartmant.Controllers
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
-             let val=rentings.Find(e=>e.Id=id);
+             var val=rentings.Find(e=>e.Id==id);
             rentings.Remove(val);
         }
     }

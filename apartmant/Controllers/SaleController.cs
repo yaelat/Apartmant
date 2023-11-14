@@ -8,7 +8,7 @@ namespace apartmant.Controllers
     [ApiController]
     public class SaleController : ControllerBase
     {
-        static List<Sale> sales=new List<Sale>;
+        static List<Sale> sales=new List<Sale>();
         static int id=0;
         // GET: api/<SaleController>
         [HttpGet]
@@ -36,7 +36,7 @@ namespace apartmant.Controllers
         [HttpPut("{id}")]
         public void Put(int id, [FromBody] Sale value)
         {
-            let val=sales.Find(e=>e.Id==id);
+            var val=sales.Find(e=>e.Id==id);
             val.Id=value.Id;
             val.Name=value.Name;    
         }
@@ -45,7 +45,7 @@ namespace apartmant.Controllers
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
-             let val=sales.Find(e=>e.Id=id);
+             var val=sales.Find(e=>e.Id==id);
             sales.Remove(val);
         }
     }
