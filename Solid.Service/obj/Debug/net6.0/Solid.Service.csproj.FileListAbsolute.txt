@@ -1,0 +1,17 @@
+C:\Users\user1\Desktop\H.W\שנה ב\net core\apartmant\Solid.Service\bin\Debug\net6.0\Solid.Service.deps.json
+C:\Users\user1\Desktop\H.W\שנה ב\net core\apartmant\Solid.Service\bin\Debug\net6.0\Solid.Service.dll
+C:\Users\user1\Desktop\H.W\שנה ב\net core\apartmant\Solid.Service\bin\Debug\net6.0\Solid.Service.pdb
+C:\Users\user1\Desktop\H.W\שנה ב\net core\apartmant\Solid.Service\bin\Debug\net6.0\Solid.Core.dll
+C:\Users\user1\Desktop\H.W\שנה ב\net core\apartmant\Solid.Service\bin\Debug\net6.0\Solid.data.dll
+C:\Users\user1\Desktop\H.W\שנה ב\net core\apartmant\Solid.Service\bin\Debug\net6.0\Solid.Core.pdb
+C:\Users\user1\Desktop\H.W\שנה ב\net core\apartmant\Solid.Service\bin\Debug\net6.0\Solid.data.pdb
+C:\Users\user1\Desktop\H.W\שנה ב\net core\apartmant\Solid.Service\obj\Debug\net6.0\Solid.Service.csproj.AssemblyReference.cache
+C:\Users\user1\Desktop\H.W\שנה ב\net core\apartmant\Solid.Service\obj\Debug\net6.0\Solid.Service.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user1\Desktop\H.W\שנה ב\net core\apartmant\Solid.Service\obj\Debug\net6.0\Solid.Service.AssemblyInfoInputs.cache
+C:\Users\user1\Desktop\H.W\שנה ב\net core\apartmant\Solid.Service\obj\Debug\net6.0\Solid.Service.AssemblyInfo.cs
+C:\Users\user1\Desktop\H.W\שנה ב\net core\apartmant\Solid.Service\obj\Debug\net6.0\Solid.Service.csproj.CoreCompileInputs.cache
+C:\Users\user1\Desktop\H.W\שנה ב\net core\apartmant\Solid.Service\obj\Debug\net6.0\Solid.Service.csproj.CopyComplete
+C:\Users\user1\Desktop\H.W\שנה ב\net core\apartmant\Solid.Service\obj\Debug\net6.0\Solid.Service.dll
+C:\Users\user1\Desktop\H.W\שנה ב\net core\apartmant\Solid.Service\obj\Debug\net6.0\refint\Solid.Service.dll
+C:\Users\user1\Desktop\H.W\שנה ב\net core\apartmant\Solid.Service\obj\Debug\net6.0\Solid.Service.pdb
+C:\Users\user1\Desktop\H.W\שנה ב\net core\apartmant\Solid.Service\obj\Debug\net6.0\ref\Solid.Service.dll

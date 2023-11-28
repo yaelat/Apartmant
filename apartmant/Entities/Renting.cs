@@ -1,7 +1,0 @@
-﻿using System;
-
-public class Renting
-{	
-        public int Id { get; set; }
-    public string Name { get; set; } = "";   
-}
