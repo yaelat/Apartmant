@@ -1,4 +1,6 @@
+using Solid.Core.Repositories;
 using Solid.Core.service;
+using Solid.data;
 using Solid.Data;
 using Solid.Service;
 
@@ -11,7 +13,12 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IRecreationService, RecreationService>();
-builder.Services.AddScoped<DataContext>();
+builder.Services.AddScoped<ISaleAndRentingService, SaleAndRentingService>();
+builder.Services.AddScoped<ICustomersService, CustomersService>();
+builder.Services.AddScoped<IRecreationRepository, RecreationRepository>();
+builder.Services.AddScoped<ISaleAndRentingRepository, SaleAndRentingRepository>();
+builder.Services.AddScoped<ICustomersRepository, CustomersRepository>();
+builder.Services.AddSingleton<DataContext>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

@@ -10,5 +10,9 @@ namespace Solid.Core.Repositories
     public interface IRecreationRepository
     {
         List<Recreation> GetAllRecreation();
+        Recreation GetRecreationById(int id);
+        Recreation PostRecreation(Recreation recreation);
+        void PutRecreation(int id, Recreation recreation);
+        void DeleteRecreation(int id);
     }
 }

@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Solid.Service", "Solid.Serv
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Solid.Core", "Solid.Core\Solid.Core.csproj", "{6D07D6C7-7306-4461-BAA1-37BEA24F9AC9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SolidControles.API", "SolidControles.API\SolidControles.API.csproj", "{ED31FAE7-D47B-4C73-A779-AFE7FE025DDF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Solid.Api", "SolidControles.API\Solid.Api.csproj", "{ED31FAE7-D47B-4C73-A779-AFE7FE025DDF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

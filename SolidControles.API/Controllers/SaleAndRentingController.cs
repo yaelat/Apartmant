@@ -7,52 +7,48 @@ namespace apartmant.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class SaleController : ControllerBase
+    public class SaleAndRentingController : ControllerBase
     {
-        private readonly ISaleService _saleService;
+        private readonly ISaleAndRentingService _saleAndRentingService;
         static int id = 0;
         // GET: api/<RecreationController>
-        public SaleController(ISaleService saleService)
+        public SaleAndRentingController(ISaleAndRentingService saleAndRentingService)
         {
-            _saleService = saleService;
+            _saleAndRentingService = saleAndRentingService;
         }
         // GET: api/<SaleController>
         [HttpGet]
         public ActionResult Get()
         {
-            return Ok(_saleService.GetAllSales);
+            return Ok(_saleAndRentingService.GetAllSaleAndRenting());
         }
 
         // GET api/<SaleController>/5
         [HttpGet("{id}")]
-        public Sale Get(int id)
+        public SaleAndRenting Get(int id)
         {
-            return _context.sales.Find(e => e.Id == id);
+            return _saleAndRentingService.GetSaleAndRentingById(id);
         }
 
         // POST api/<SaleController>
         [HttpPost]
-        public void Post([FromBody] Sale value)
+        public SaleAndRenting Post([FromBody] SaleAndRenting value)
         {
-            value.Id = id++;
-            _context.sales.Add(value);
+           return _saleAndRentingService.PostSaleAndRenting(value);    
         }
 
         // PUT api/<SaleController>/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] Sale value)
+        public void Put(int id, [FromBody] SaleAndRenting value)
         {
-            var val = _context.sales.Find(e => e.Id == id);
-            val.Id = value.Id;
-            val.Name = value.Name;
+            _saleAndRentingService.PutSaleAndRanting(id, value);
         }
 
         // DELETE api/<SaleController>/5
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
-            var val = _context.sales.Find(e => e.Id == id);
-            _context.sales.Remove(val);
+            _saleAndRentingService.DeleteSaleAndRenting(id);
         }
     }
 }

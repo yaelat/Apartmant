@@ -6,12 +6,12 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v6.0": {
-      "Solid.data/1.0.0": {
+      "Solid.Data/1.0.0": {
         "dependencies": {
           "Solid.Core": "1.0.0"
         },
         "runtime": {
-          "Solid.data.dll": {}
+          "Solid.Data.dll": {}
         }
       },
       "Solid.Core/1.0.0": {
@@ -22,7 +22,7 @@
     }
   },
   "libraries": {
-    "Solid.data/1.0.0": {
+    "Solid.Data/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

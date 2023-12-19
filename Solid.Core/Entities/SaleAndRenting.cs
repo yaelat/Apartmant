@@ -1,6 +1,6 @@
 ﻿using System;
 namespace Solid.Core.Entities;
-public class Sale
+public class SaleAndRenting
 {
 	
 		public int Id{ get; set; }

@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.ObjectPool;
+using Solid.Core.Entities;
 using Solid.Core.service;
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -10,7 +11,6 @@ namespace apartmant.Controllers
     public class RecreationController : ControllerBase
     {
         private readonly IRecreationService _recreationService;
-        static int id = 0;
         // GET: api/<RecreationController>
         public RecreationController(IRecreationService recreationService)
         {
@@ -19,34 +19,28 @@ namespace apartmant.Controllers
         [HttpGet]
         public ActionResult Get()
         {
-            return Ok(_recreationService.GetAllRecreation);
+            return Ok(_recreationService.GetAllRecreation());
         }
 
         // GET api/<RecreationController>/5
         [HttpGet("{id}")]
         public Recreation Get(int id)
         {
-            return _context.recreations.Find(e => e.Id == id);
+            return _recreationService.GetRecreationById(id);
         }
 
         // POST api/<RecreationController>
         [HttpPost]
-        public void Post([FromBody] Recreation value)
+        public Recreation Post([FromBody] Recreation value)
         {
-            value.Id = id++;
-            _context.recreations.Add(value);
+            return _recreationService.PostRecreation(value);
         }
 
         // PUT api/<RecreationController>/5
         [HttpPut("{id}")]
         public void Put(int id, [FromBody] Recreation value)
         {
-            var val = _context.recreations.Find(e => e.Id == id);
-            val.Id = value.Id;
-            val.Price = value.Price;
-            val.NameOner = value.NameOner;
-            val.Number = value.Number;
-            val.Adress = value.Adress;
+            _recreationService.PutRecreation(id, value);
 
         }
 
@@ -54,8 +48,7 @@ namespace apartmant.Controllers
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
-            var val = _context.recreations.Find(e => e.Id == id);
-            _context.recreations.Remove(val);
+            _recreationService.DeleteRecreation(id);
         }
     }
 }

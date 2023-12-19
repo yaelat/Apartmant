@@ -8,53 +8,48 @@ namespace apartmant.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class RentingController : ControllerBase
+    public class CustomersController : ControllerBase
     {
-        private readonly IRentingService _rentingService;
-        static int id = 0;
+        private readonly ICustomersService _customersService;
         // GET: api/<RecreationController>
-        public RentingController(IRentingService rentingService)
+        public CustomersController(ICustomersService customerService)
         {
-            _rentingService = rentingService;
+            _customersService = customerService;
         }
 
         // GET: api/<RentingController>
         [HttpGet]
         public ActionResult Get()
         {
-            return Ok(_rentingService.GetAllRenting);
+            return Ok(_customersService.GetAllCustomers());
         }
 
         // GET api/<RentingController>/5
         [HttpGet("{id}")]
-        public Renting Get(int id)
+        public ActionResult Get(int id)
         {
-            return _context.rentings.Find(e => e.Id == id);
+            return Ok(_customersService.GetCustomerById(id));
         }
 
         // POST api/<RentingController>
         [HttpPost]
-        public void Post([FromBody] Renting value)
+        public Customer Post([FromBody] Customer value)
         {
-            value.Id = id++;
-            _context.rentings.Add(value);
+            return _customersService.PostCustomer(value);
         }
 
         // PUT api/<RentingController>/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] Renting value)
+        public void Put(int id, [FromBody] Customer value)
         {
-            var val = _context.rentings.Find(e => e.Id == id);
-            val.Id = value.Id;
-            val.Name = value.Name;
+            _customersService.PutCustomer(id, value);
         }
 
         // DELETE api/<RentingController>/5
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
-            var val = _context.rentings.Find(e => e.Id == id);
-            _context.rentings.Remove(val);
+            _customersService.DeleteCustomer(id);
         }
     }
 }

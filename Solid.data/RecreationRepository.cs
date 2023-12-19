@@ -17,5 +17,30 @@ namespace Solid.data
         {
             return _context.recreations;
         }
+
+        public Recreation GetRecreationById(int id)
+        {
+            return _context.recreations.Find(re=>re.Id== id);
+        }
+
+        public Recreation PostRecreation(Recreation recreation)
+        {
+            recreation.Id=_context.recreations.Count()+1;
+            _context.recreations.Add(recreation);
+            return recreation;
+        }
+
+        public void PutRecreation(int id, Recreation recreation)
+        {
+            var rec = _context.recreations.Find(rec => rec.Id == id);
+            rec.Number=recreation.Number;
+            rec.Adress=recreation.Adress;
+            rec.Price=recreation.Price;
+            rec.NameOner=recreation.NameOner;
+        } 
+        public void DeleteRecreation(int id)
+        {
+            _context.recreations.Remove(_context.recreations.Find(rec => rec.Id == id));
+        }
     }
 }
